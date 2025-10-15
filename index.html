@@ -29,6 +29,29 @@
 
   
 </head>
+<script>
+  // Init AOS (Animate on Scroll)
+  AOS.init({
+    duration: 1000,
+    easing: 'ease-in-out',
+    once: true,
+    mirror: false
+  });
+
+  // Init Typed.js
+  const typed = document.querySelector('.typed');
+  if (typed) {
+    let typedStrings = typed.getAttribute('data-typed-items');
+    typedStrings = typedStrings.split(',');
+    new Typed('.typed', {
+      strings: typedStrings,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000,
+      loop: true
+    });
+  }
+</script>
 
 <body class="index-page">
 
